@@ -3,8 +3,215 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon.png">
 </head>
 <body>
+
+    <div class="top-row">
+        <img class="logo" src="images/logo.png">
+        <!-- https://www.flaticon.com/free-icon/dinosaur_2614727 -->
+
+        <div class="menu">
+            <a class="menu-item" href="https://www.nhm.ac.uk/discover/what-are-dinosaurs.html" target="_blank">
+                About
+            </a>
+
+            <a class="menu-item" href="https://www.amnh.org/dinosaurs/types-of-dinosaurs" target="_blank">
+                Species
+            </a>
+
+            <a class="menu-item" href="https://www.amnh.org/dinosaurs/dinosaur-facts" target="_blank">
+                Fun facts
+            </a>
+
+            <a class="menu-item" href="https://www.nhm.ac.uk/discover/news/2026/february/new-sabre-crested-spinosaurus-species-named-from-desert-dinosaur-fossils.html" target="_blank">
+                News
+            </a>
+
+            <a class="menu-item" href="https://en.wikipedia.org/wiki/Dinosaur" target="_blank">
+                Learn more
+            </a>
+        </div>
+
+        <div class="utility-menu">
+            <button class="utility-btn">
+                Contact Us
+            </button>
+
+            <button class="utility-btn">
+                Login
+            </button>
+
+            <button class="signup-btn">
+                Sign Up
+            </button>
+        </div>
+
+    </div> 
+    <!-- end of the nav bar -->
+
+
+    <!-- start of the third row -->
+    <div class="third-row">
+        <div class="column">
+            <div class="hero-card">
+                <img class="hero-img" src="images/clock.png">
+                <!-- https://www.flaticon.com/free-icon/calendar_15443006 -->
+                <h2>245 million</h2>
+                <p class="card-text">Is the amount of years during which dinosaurs roamed the Earth</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="hero-card">
+                <img class="hero-img" src="images/fossil.png">
+                <!-- https://www.freepik.com/icon/fossil_472770 -->
+                <h2>700</h2>
+                <p class="card-text">Is the roughly the number of dinosaur species found to date.</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="hero-card">
+                <img class="hero-img" src="images/sauropod.png">
+                <!-- https://www.freepik.com/icon/europasaurus_8572743#fromView=keyword&page=1&position=14&uuid=4acaf718-e976-4edb-8270-0881261b7a8c -->
+                <h2>18 m</h2>
+                <p class="card-text">Is roughly the size of an adult Sauropod, the largest animals that have ever existed!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- start of the carousel -->
+<!-- 
+    <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <svg
+              aria-hidden="true"
+              class="bd-placeholder-img"
+              height="100%"
+              preserveAspectRatio="xMidYMid slice"
+              width="100%"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                width="100%"
+                height="100%"
+                fill="var(--bs-secondary-color)"
+              ></rect>
+            </svg>
+            <div class="container">
+              <div class="carousel-caption text-start">
+                <h1>Example headline.</h1>
+                <p class="opacity-75">
+                  Some representative placeholder content for the first slide of
+                  the carousel.
+                </p>
+                <p>
+                  <a class="btn btn-lg btn-primary" href="#">Sign up today</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <svg
+              aria-hidden="true"
+              class="bd-placeholder-img"
+              height="100%"
+              preserveAspectRatio="xMidYMid slice"
+              width="100%"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                width="100%"
+                height="100%"
+                fill="var(--bs-secondary-color)"
+              ></rect>
+            </svg>
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Another example headline.</h1>
+                <p>
+                  Some representative placeholder content for the second slide
+                  of the carousel.
+                </p>
+                <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <svg
+              aria-hidden="true"
+              class="bd-placeholder-img"
+              height="100%"
+              preserveAspectRatio="xMidYMid slice"
+              width="100%"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                width="100%"
+                height="100%"
+                fill="var(--bs-secondary-color)"
+              ></rect>
+            </svg>
+            <div class="container">
+              <div class="carousel-caption text-end">
+                <h1>One more for good measure.</h1>
+                <p>
+                  Some representative placeholder content for the third slide of
+                  this carousel.
+                </p>
+                <p>
+                  <a class="btn btn-lg btn-primary" href="#">Browse gallery</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div> -->
+
+    <!-- end of the carousel -->
     
 </body>
 </html>

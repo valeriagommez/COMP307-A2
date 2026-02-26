@@ -1,0 +1,149 @@
+body, button {
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+body{
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+}
+
+
+
+/* top row */
+.top-row {
+    background-color: #7FBB5E50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo {
+    height: 60px;
+    width : auto;
+    margin: 15px 0px 15px 30px;
+}
+
+.menu {
+    margin-left: 50px;
+    display: flex;
+    gap: 50px;
+}
+
+.menu-item {
+    font-weight: 500;
+    color: #3c872b;
+    transition: all ease-in-out 0.3s;
+}
+
+.menu-item:hover {
+    transform: translateY(-3px);
+    color: #0a5d28;
+}
+
+.utility-menu {
+    margin-right: 50px;
+    margin-left: auto;
+}
+
+button{
+    padding: 10px 15px;
+    margin: 0px 5px;
+    font-weight: 600;
+}
+
+.utility-btn {
+    background-color: #7FBB5E00;
+    color: #3c872b;
+    border: none;
+    border-radius: 25px;
+    transition: all ease-in-out 0.2s;
+}
+
+.utility-btn:hover {
+    background-color: #7FBB5E50;
+    border: none;
+    color: #3c872b;
+    border-radius: 25px;
+}
+
+.signup-btn{
+    background-color: #7FBB5E;
+    border: none;
+    color: #fff;
+    border-radius: 25px;
+    transition: all ease-in-out 0.2s;
+}
+
+.signup-btn:hover {
+    background-color: #3c872b;
+}
+
+/* second row */
+
+/* third row */
+/* .third-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+} */
+
+h2 {
+    font-size: 32px;
+    color: #3c872b;
+}
+
+.third-row {
+    margin-top: 50px;
+}
+
+.hero-img {
+    width: 30%;
+    margin: 20px;
+}
+
+.hero-card {
+    width: 90%;
+    margin: auto;
+    background-color: #7FBB5E20;
+    padding: 20px 0;
+    border-radius: 35px;
+    transition: all ease-in-out 0.3s;
+}
+
+.hero-card:hover {
+    background-color: #7FBB5E50;
+    box-shadow: 0px 10px 15px #27572b78;
+    transform: translateY(-5px);
+}
+
+.card-text {
+    margin: 20px 40px;
+    line-height: 24pt;
+}
+
+.column {
+    width: 33.3%;
+    float: left;
+    align-items: center;
+    text-align: center;
+}
