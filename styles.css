@@ -5,54 +5,45 @@ body, button {
 
 body{
     margin: 0;
+    padding: 0 !important;
+    background-color: #fffaf5 !important;
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
-
-/* Carousel base class */
-.carousel {
-  margin-bottom: 4rem;
-}
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  bottom: 3rem;
-  z-index: 10;
-}
-
-/* Declare heights because of positioning of img element */
-.carousel-item {
-  height: 32rem;
-}
-
-
 
 /* top row */
 .top-row {
-    background-color: #7FBB5E50;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+  overflow: hidden;
+  background-color: #7FBB5E50;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 8px 16px;
+  width: 100%;
+  transition: all ease-in-out 0.3s;
 }
 
 .logo {
-    height: 60px;
-    width : auto;
-    margin: 15px 0px 15px 30px;
+  height: 75px;
+  width: auto;
+  margin: 10px 0;
+  margin-left: 20px;
 }
 
+/* links */
 .menu {
-    margin-left: 50px;
-    display: flex;
-    gap: 50px;
+  display: flex;
+  gap: 24px;
 }
 
 .menu-item {
-    font-weight: 500;
     color: #3c872b;
+    text-decoration: none;
+    font-size: 17px;
     transition: all ease-in-out 0.3s;
+    margin-left: 20px;
 }
 
 .menu-item:hover {
@@ -61,8 +52,9 @@ a {
 }
 
 .utility-menu {
-    margin-right: 50px;
-    margin-left: auto;
+    margin-left: auto; 
+    display: flex;
+    gap: 10px;
 }
 
 button{
@@ -98,14 +90,59 @@ button{
     background-color: #3c872b;
 }
 
-/* second row */
+/* hamburger */
+.top-row .icon {
+    display: none;
+    font-size: 28px;
+    color: #3c872b;
+    text-decoration: none;
+    padding: 10px 14px;
+}
+
+
+/* second row -- copy pasted from the bootstrap code */
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+.carousel {
+  margin-bottom: 4rem;
+}
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+.carousel-item {
+  height: 32rem;
+}
+
+.carousel-btn {
+    background-color: #7FBB5E;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border-radius: 25px;
+    transition: all ease-in-out 0.2s;
+}
+
+.carousel-btn:hover {
+    background-color: #3c872b;
+}
+
+.carousel-img {
+    filter: brightness(50%);
+    height: 100%;
+    width: 100%;
+    /* background-position: top; */
+    object-fit: cover;
+}
 
 /* third row */
-/* .third-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: top;
-} */
 
 h2 {
     font-size: 32px;
@@ -114,6 +151,13 @@ h2 {
 
 .third-row {
     margin-top: 50px;
+    margin-bottom : 25px;
+}
+
+.third-row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .hero-img {
@@ -128,17 +172,25 @@ h2 {
     padding: 20px 0;
     border-radius: 35px;
     transition: all ease-in-out 0.3s;
+    cursor: pointer;
 }
 
-.hero-card:hover {
+.hero-card:hover  {
     background-color: #7FBB5E50;
-    box-shadow: 0px 10px 15px #27572b78;
+    box-shadow: 0px 8px 10px #27572b10;
     transform: translateY(-5px);
 }
 
+.hero-card.active {
+    background-color: #7FBB5E80;
+    box-shadow: 0px 8px 10px #27572b20;
+    transform: translateY(-8px);
+}
+
+
 .card-text {
     margin: 20px 40px;
-    line-height: 24pt;
+    line-height: 20pt;
 }
 
 .column {
@@ -146,4 +198,142 @@ h2 {
     float: left;
     align-items: center;
     text-align: center;
+}
+
+/* fourth row */
+/* .fourth-row {
+    background-color: #53854a;
+    padding : 40px 70px;
+    display: none;
+    line-height: 20pt;
+    color: white;
+    transition: all ease-in-out 0.3s;
+} */
+
+.fourth-row {
+    background-color: #53854a;
+    padding: 0 70px;         
+    line-height: 20pt;
+    color: white;
+
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+
+    transition: max-height 0.5s ease, opacity 0.3s ease, padding 0.3s ease;
+}
+
+.fourth-row.show {
+    max-height: 200px;       
+    opacity: 1;
+    padding: 40px 70px;       
+}
+
+/* media sizing */
+
+/* FOR PHONES */
+@media (min-width:600px) and (max-width:850px) {
+    .menu,
+    .utility-menu {
+        display: none;
+    }
+
+    .top-row .icon {
+        display: block;
+        margin-left: auto; /* keep it on the right */
+    }
+
+    .top-row.responsive {
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    .top-row.responsive .menu, .top-row.responsive .utility-menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 0px;
+        margin-left: 0;
+    }
+
+    .top-row.responsive .menu-item {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-item {
+        margin: 0;
+        padding: 20px 0;
+    }
+
+    .menu-item:hover {
+        background-color: #3c872b20;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .logo {
+        width: 50px;
+        height: auto;
+    }
+
+    .menu,
+    .utility-menu {
+        display: none;
+    }
+
+    .top-row .icon {
+        display: block;
+        margin-left: auto; /* keep it on the right */
+    }
+
+    .top-row.responsive {
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    .top-row.responsive .menu, .top-row.responsive .utility-menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 0px;
+        margin-left: 0;
+    }
+
+    .top-row.responsive .menu-item {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    .top-row.responsive .menu-item {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-item {
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    .menu-item:hover {
+        background-color: #3c872b20;
+        transform: translateY(0);
+    }
+
+    .third-row{
+        margin-top: 30px;
+    }
+
+    .column {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .fourth-row.show {
+        max-height: 50%;
+    }
 }
